@@ -35,7 +35,7 @@ const EditCar = () => {
     formData.append("title", title);
     formData.append("subtitle", subtitle);
     try {
-      await axios.patch(`https://rent-cars-api.herokuapp.com/admin/order/${id}`, formData, {
+      await axios.put(`https://rent-cars-api.herokuapp.com/admin/car/${id}`, formData, {
         headers: {
           "Content-type": "multipart/form-data",
         },

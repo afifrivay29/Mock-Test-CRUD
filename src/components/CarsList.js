@@ -28,7 +28,7 @@ const CarsList = () => {
 
   return (
     <div className="container mt-5">
-      <Link to="/add" className="button is-success">
+      <Link to="/admin/car" className="button is-success">
         Add New
       </Link>
       <hr/>
@@ -51,7 +51,7 @@ const CarsList = () => {
               </div>
 
               <footer className="card-footer">
-                <Link to={`edit/${car.id}`} className="card-footer-item">
+                <Link to={`/admin/car/${car.id}`} className="card-footer-item">
                   Edit
                 </Link>
                 <a
