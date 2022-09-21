@@ -28,8 +28,13 @@ const CarsList = () => {
 
   return (
     <div className="container mt-5">
-      <Link to="/admin/car" className="button is-success">
-        Add New
+      <h1 className='product-list title is-3'>Product List 
+        <Link to="/admin/car" className="button is-dark ml-5">
+          Add New
+        </Link>
+      </h1>
+      <Link to="/" className="logout navbar-end">
+        Logout
       </Link>
       <hr/>
       <div className="columns is-multiline mt-2">

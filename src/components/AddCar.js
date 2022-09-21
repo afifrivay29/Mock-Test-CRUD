@@ -21,6 +21,7 @@ const AddCar = () => {
     formData.append("file", file);
     formData.append("title", title);
     formData.append("subtitle", subtitle);
+    console.log(file, title, subtitle)
     try {
       await axios.post(
         "https://rent-cars-api.herokuapp.com/admin/car",
@@ -31,7 +32,7 @@ const AddCar = () => {
           },
         }
       );
-      navigate("/");
+      navigate("/dashboard");
     } catch (error) {
       console.log(error);
     }

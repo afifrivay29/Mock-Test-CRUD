@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 
 function Register() {
@@ -19,7 +19,7 @@ function Register() {
                 email: email, 
                 password: password
             });
-            navigate.push("/login");
+            navigate("/");
         } catch (error) {
             if (error.response) {
                 setMessage(error.response.data.message);
@@ -55,8 +55,13 @@ function Register() {
                         </div>
                     </div>
                     <div className="field mb-5">
-                        <button className='button is-dark is-fullwidth'>Register</button>
+                        <button type='submit' className='button is-dark is-fullwidth'>Register</button>
                     </div>
+                    <p className='has-text-centered'>Already have account?
+                      <Link to="/" className="link-login">
+                        Login
+                      </Link>
+                    </p>
                 </form>
             </div>
           </div>
